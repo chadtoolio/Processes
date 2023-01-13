@@ -24,7 +24,7 @@ def openFile():
     file.close()
 
 button = Button(text="Service Advisor Procedures",command=openFile)
-button.pack()
+button.grid_slaves(row= 0, column= 0)
 
 def openFile():
     sa_proc = filedialog.askopenfilename(initialdir="C:\\tmb_ammended_projects\\Processes\\TMB Posted policy",
@@ -36,14 +36,7 @@ def openFile():
     file.close()
 
 button = Button(text="TMB Posted Policy",command=openFile)
-button.pack()
-
-
-
-
-
-
-
+button.grid_slaves(row=1, column=0)
 
 
 window.mainloop()
