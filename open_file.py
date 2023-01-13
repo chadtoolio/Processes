@@ -1,6 +1,6 @@
 from tkinter import *
 from tkinter import filedialog
-
+window = Tk()
 def openFile():
     tech_proc = filedialog.askopenfilename(initialdir="C:\\tmb_ammended_projects\\Processes\\Technician Processes",
                                           title="Open file okay?",
@@ -10,9 +10,9 @@ def openFile():
     print(file.read())
     file.close()
 
-window = Tk()
+
 button = Button(text="Tech Procedures",command=openFile)
-button.pack()
+button.grid_slaves(row= 0, column= 0)
 
 def openFile():
     sa_proc = filedialog.askopenfilename(initialdir="C:\\tmb_ammended_projects\\Processes\\Service advisor Processes",
@@ -24,7 +24,7 @@ def openFile():
     file.close()
 
 button = Button(text="Service Advisor Procedures",command=openFile)
-button.grid_slaves(row= 0, column= 0)
+button.grid_slaves(row= 1, column= 0)
 
 def openFile():
     sa_proc = filedialog.askopenfilename(initialdir="C:\\tmb_ammended_projects\\Processes\\TMB Posted policy",
@@ -36,7 +36,7 @@ def openFile():
     file.close()
 
 button = Button(text="TMB Posted Policy",command=openFile)
-button.grid_slaves(row=1, column=0)
+button.grid_slaves(row=2, column=0)
 
 
 window.mainloop()
