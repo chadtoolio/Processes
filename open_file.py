@@ -8,6 +8,8 @@ window.title("Total MINI & BMW Processes and Procedures")
 
 
 def openFile():
+
+
     tech_proc = filedialog.askopenfilename(initialdir="C:\\tmb_ammended_projects\\Processes\\Technician Processes",
                                           title="Open file okay?",
                                           filetypes= (("text files","*.txt, *.docx"),
